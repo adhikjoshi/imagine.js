@@ -29,7 +29,7 @@ await Imagine("a red rose"); // Buffer(...)
 **Features**
 
 - Easy to use
-- Same interface for all services (`a1111`, `replicate`, `stability`)
+- Same interface for all services (`a1111`, `replicate`, `stability`, `modelslab`)
 - Works with local `Stable Diffusion` models
 - Works with any remote models on `Replicate` or `Stability AI`
 - Create image prompts with LLMs for excellent results
@@ -50,6 +50,7 @@ For remote models, make sure you have `REPLICATE_API_KEY` or `STABILITY_API_KEY`
 
 ```bash
 export STABILITY_API_KEY=...
+export MODELSLAB_API_KEY=...
 export REPLICATE_API_KEY=...
 ```
 
@@ -72,6 +73,7 @@ Specify a different image generator service, `a1111`, `replicate` or `stability`
 await Imagine("a red rose"); // defaults to a1111
 await Imagine("a red rose", { service: "replicate"} );
 await Imagine("a red rose", { service: "stability"} );
+await Imagine("a red rose", { service: "modelslab"} );
 ```
 
 Making it easy to switch providers ensures you can try lots of combinations and prevent getting locked in!
